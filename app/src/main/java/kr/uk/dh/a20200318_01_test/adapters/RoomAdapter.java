@@ -48,15 +48,9 @@ public class RoomAdapter extends ArrayAdapter<Room> {
 //        가격 설정 => setText에는 int값 넣지 말자.
 //
 //        priceTxt.setText(data.getAddress());
-        if (data.getPrice() >= 10000) {
-            int uk = data.getPrice() / 10000;
-            int thousand = data.getPrice() %10000;
+      priceTxt.setText(data.getFormattedPrice());
 
-            priceTxt.setText(String.format("%d억 %,d" , uk , thousand));
-        }
-        else {
-            priceTxt.setText(String.format("%,d", data.getPrice()));
-        }
+
         String floorStr = "";
         if (data.getFloor() >0 ) {
             floorStr = String.format("%d층",data.getFloor());
