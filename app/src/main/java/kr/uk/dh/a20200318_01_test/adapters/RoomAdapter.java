@@ -71,7 +71,9 @@ public class RoomAdapter extends ArrayAdapter<Room> {
         }
 //        주소 / 층수 결합해서.
         addressAndFloorTxt.setText(String.format("%s,%S",data.getAddress(),floorStr));
-                return row;
 
+        descTxt.setText(data.getDescription());
+        return row;
     }
+
 }
